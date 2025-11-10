@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy 6th Monthsary, Babi</title>
+  <meta name="description" content="A romantic, animated microsite celebrating our 6th monthsary. Pink theme, flip-card gallery, love letter for Babi, and background music." />
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <meta property="og:title" content="Happy 6th Monthsary, Babi" />
+  <meta property="og:description" content="Scroll through memories, a love letter, and soft pink animations." />
+  <meta property="og:image" content="./assets/photo1.png" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+  <meta name="theme-color" content="#FFC0CB" />
+</head>
+<body>
+  <header class="hero" aria-label="Hero">
+    <div class="hero-inner">
+      <h1 class="script">Happy 6th Monthsary, Babi</h1>
+      <p class="subtitle">Billy Joe × Chrish Ann Crescencio</p>
+      <div class="scroll-indicator" aria-hidden="true">
+        <span>Scroll to begin</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 9l6 6 6-6" stroke="#E91E63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+    </div>
+    <canvas id="heroParallax" aria-hidden="true"></canvas>
+  </header>
+
+  <main>
+    <!-- Gallery Section (after letter) -->
+    <section class="section" id="gallery" aria-labelledby="gallery-title">
+      <h2 id="gallery-title" class="section-title">Three Moments</h2>
+      <div class="cards" role="list">
+        <article class="card reveal" role="listitem">
+          <div class="card-inner is-flipped" tabindex="0" aria-label="Flip to reveal photo">
+            <div class="card-face card-front"><img src="assets/photo1.jpg" alt="A happy memory—pink sky" loading="lazy" /></div>
+            <div class="card-face card-back"><p>Chrish: Sumasakit ulo ko sayo🤦‍♀️</p></div>
+          </div>
+        </article>
+        <article class="card reveal" role="listitem">
+          <div class="card-inner is-flipped" tabindex="0" aria-label="Flip to reveal photo">
+            <div class="card-face card-front"><img src="assets/photo2.jpg" alt="A quiet moment together" loading="lazy" /></div>
+            <div class="card-face card-back"><p>Ang laki ng muka mo babi mas malaki pa sa muscles ko hehe😆😘</p></div>
+          </div>
+        </article>
+        <article class="card reveal" role="listitem">
+          <div class="card-inner is-flipped" tabindex="0" aria-label="Flip to reveal photo">
+            <div class="card-face card-front"><img src="assets/photo3.jpg" alt="Promises we keep" loading="lazy" /></div>
+            <div class="card-face card-back"><p>Chrish: Babi TikTok tayo😛</p></div>
+          </div>
+        </article>
+      </div>
+      <p class="hint">Flip to reveal the photo.</p>
+    </section>
+
+    <!-- Love Letter Section (first) -->
+    <section class="section" id="letter" aria-labelledby="letter-title">
+      <h2 id="letter-title" class="section-title">A Letter for Babi</h2>
+      <div class="letter reveal" role="article">
+        <p>Babi, happy 6th monthsary! Thank you for the laughs, the late-night talks, and every little moment we share. sana di kana mawala sakin</p>
+        <p>gusto ko makasama ka habang buhay mahal na mahal kita Babi kahit lagi tayo mag kaaway HAHAHA and Here’s to more sunsets, more stories, and more smiles together.</p>
+        <p class="signature">— From Billy Joe, always yours.</p>
+      </div>
+      <div class="pause-point" aria-hidden="true"></div>
+      <canvas id="confetti" aria-hidden="true"></canvas>
+    </section>
+    <footer class="footer">
+      <p>Forever grateful for you.</p>
+      <small>6th Monthsary — Billy Joe &amp; Chrish Ann</small>
+    </footer>
+  </main>
+
+  <!-- Audio Controls: hard-wired to assets/our-song.mp3, flip-to-play -->
+  <div class="audio-controls" role="region" aria-label="Music player">
+    <button id="playPause" aria-label="Play Music">▶️ <span class="label">Play Music</span></button>
+    <span class="track-name" aria-live="polite">Now Playing</span>
+    <audio id="bgm" preload="none">
+      <source src="assets/That's What I Like - Bruno Mars (1).mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <div id="cursorHearts" aria-hidden="true"></div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
